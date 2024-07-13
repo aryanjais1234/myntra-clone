@@ -14,7 +14,7 @@ function FetchItems() {
     const signal = controller.signal;
 
     dispatch(fetchStatusActions.markFetchingStarted());
-    fetch("http://localhost:8000/items", { signal })
+    fetch("https://myntra-clone-vasi.onrender.com/items", { signal })
       .then((res) => res.json())
       .then(({ items }) => {
         dispatch(fetchStatusActions.markFetchDone());
